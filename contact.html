@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact K16 Contracts - Get in touch for quality home extensions and renovations. Free consultations available. Call 01234 567890.">
+    <title>Contact Us - K16 Contracts | Get Your Free Quote</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/k16 logo.png" alt="K16 Contracts Logo" height="45" class="me-2">
+                <span class="fw-bold fs-4">K16 Contracts</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="process.html">Our Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="consultation.html" class="btn btn-primary ms-3">Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, rgba(44, 82, 130, 0.9), rgba(26, 54, 93, 0.9)), url('images/british-home.jpg') center/cover; padding: 120px 0 80px; color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Get In Touch</h1>
+                    <p class="lead">Start your home transformation journey with a free consultation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info-card h-100">
+                        <div class="text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-telephone-fill fs-1 text-primary"></i>
+                            </div>
+                            <h4>Call Us</h4>
+                            <p class="mb-2">Mon-Fri: 8am-6pm<br>Sat: 9am-4pm</p>
+                            <a href="tel:01234567890" class="h5 text-primary text-decoration-none">01234 567890</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info-card h-100">
+                        <div class="text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-envelope-fill fs-1 text-primary"></i>
+                            </div>
+                            <h4>Email Us</h4>
+                            <p class="mb-2">We'll respond within<br>24 hours</p>
+                            <a href="mailto:info@k16contracts.co.uk" class="text-primary text-decoration-none">info@k16contracts.co.uk</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info-card h-100">
+                        <div class="text-center p-4">
+                            <div class="mb-3">
+                                <i class="bi bi-geo-alt-fill fs-1 text-primary"></i>
+                            </div>
+                            <h4>Service Area</h4>
+                            <p class="mb-2">We cover a 30-mile radius<br>from our base</p>
+                            <span class="text-primary">Local & Reliable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="bg-white p-5 rounded shadow">
+                        <h2 class="h1 fw-bold mb-4 text-center">Send Us a Message</h2>
+                        <p class="text-center mb-5">Have a question or ready to discuss your project? We'd love to hear from you.</p>
+                        
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">Please enter your first name.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">Please enter your last name.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                    <div class="invalid-feedback">Please enter your phone number.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="projectType" class="form-label">Project Type *</label>
+                                <select class="form-select" id="projectType" required>
+                                    <option value="">Select a project type...</option>
+                                    <option value="extension">Home Extension</option>
+                                    <option value="kitchen">Kitchen Renovation</option>
+                                    <option value="bathroom">Bathroom Installation</option>
+                                    <option value="loft">Loft Conversion</option>
+                                    <option value="general">General Building Work</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a project type.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="timeline" class="form-label">When are you looking to start?</label>
+                                <select class="form-select" id="timeline">
+                                    <option value="">Select timeline...</option>
+                                    <option value="asap">As soon as possible</option>
+                                    <option value="1month">Within 1 month</option>
+                                    <option value="3months">Within 3 months</option>
+                                    <option value="6months">Within 6 months</option>
+                                    <option value="planning">Just planning</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Tell us about your project *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">Please describe your project.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="hearAbout" class="form-label">How did you hear about us?</label>
+                                <select class="form-select" id="hearAbout">
+                                    <option value="">Select an option...</option>
+                                    <option value="recommendation">Friend/Family Recommendation</option>
+                                    <option value="search">Internet Search</option>
+                                    <option value="social">Social Media</option>
+                                    <option value="signage">Site Signage</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="consent" required>
+                                <label class="form-check-label" for="consent">
+                                    I consent to K16 Contracts contacting me about my enquiry *
+                                </label>
+                                <div class="invalid-feedback">Please check this box to proceed.</div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Contact Us -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center h1 fw-bold mb-5">What Happens Next?</h2>
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <span class="fs-2 fw-bold text-primary">1</span>
+                        </div>
+                    </div>
+                    <h5>Quick Response</h5>
+                    <p>We'll acknowledge your enquiry within 24 hours</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <span class="fs-2 fw-bold text-primary">2</span>
+                        </div>
+                    </div>
+                    <h5>Initial Discussion</h5>
+                    <p>We'll call to understand your needs and answer questions</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <span class="fs-2 fw-bold text-primary">3</span>
+                        </div>
+                    </div>
+                    <h5>Site Visit</h5>
+                    <p>Arrange a free consultation at your property</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <span class="fs-2 fw-bold text-primary">4</span>
+                        </div>
+                    </div>
+                    <h5>Detailed Quote</h5>
+                    <p>Receive a comprehensive, no-obligation quote</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center h1 fw-bold mb-5">Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="contactFAQ">
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Is the consultation really free?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body">
+                                    Yes, absolutely! Our initial consultation is completely free with no obligation. We'll visit your property, discuss your requirements, and provide expert advice without any charge.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How quickly can you start work?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body">
+                                    This depends on our current schedule and the complexity of your project. Typically, we can begin work within 2-4 weeks of accepting a quote. We'll give you a clear timeline during the consultation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you work evenings and weekends?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body">
+                                    Our standard working hours are Monday-Friday 8am-6pm and Saturday 9am-4pm. We can arrange consultations outside these hours by appointment. Construction work is typically done during standard hours to minimize disruption.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What areas do you cover?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body">
+                                    We cover a 30-mile radius from our base, ensuring we can provide prompt, reliable service to all our clients. Contact us to confirm we cover your area.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="h1 fw-bold mb-4">Ready to Transform Your Home?</h2>
+                <p class="lead mb-4">Don't let another day pass in an overcrowded home</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="bg-white bg-opacity-10 p-4 rounded">
+                            <h3 class="mb-3">Call Us Now</h3>
+                            <a href="tel:01234567890" class="h2 text-white text-decoration-none">01234 567890</a>
+                            <p class="mt-3 mb-0">Mon-Fri: 8am-6pm | Sat: 9am-4pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/k16 logo.png" alt="K16 Contracts Logo" height="40" class="me-2">
+                        <span class="fw-bold fs-5 text-white">K16 Contracts</span>
+                    </div>
+                    <p>Family-run builders delivering quality home extensions and renovations since 1998. Your home, our reputation.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-white-50">Services</a></li>
+                        <li><a href="process.html" class="text-white-50">Our Process</a></li>
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#extensions" class="text-white-50">Home Extensions</a></li>
+                        <li><a href="services.html#kitchens" class="text-white-50">Kitchen Renovations</a></li>
+                        <li><a href="services.html#bathrooms" class="text-white-50">Bathroom Installations</a></li>
+                        <li><a href="services.html" class="text-white-50">Loft Conversions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="text-white-50"><i class="bi bi-telephone"></i> 01234 567890</li>
+                        <li class="text-white-50"><i class="bi bi-envelope"></i> info@k16contracts.co.uk</li>
+                        <li class="text-white-50"><i class="bi bi-clock"></i> Mon-Fri: 8am-6pm</li>
+                        <li class="text-white-50"><i class="bi bi-clock"></i> Sat: 9am-4pm</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white-50">&copy; 2024 K16 Contracts. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Additional Styles -->
+    <style>
+        .contact-info-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+    </style>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
