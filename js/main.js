@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links (skip bare # links)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (href === '#' || href.length <= 1) return;
+            const target = document.querySelector(href);
             if (target) {
+                e.preventDefault();
                 const offsetTop = target.offsetTop - 80;
                 window.scrollTo({
                     top: offsetTop,
@@ -272,88 +274,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Service hover effects
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
+    // Back to top button
+    const backToTop = document.createElement('button');
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = '<i class="bi bi-arrow-up"></i>';
+    backToTop.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(backToTop);
+
+    backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
     });
 
 });
-
-// Add lightbox styles dynamically
-const lightboxStyles = `
-    .lightbox {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        z-index: 10000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    
-    .lightbox.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 1;
-    }
-    
-    .lightbox-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-    }
-    
-    .lightbox-content img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 5px;
-    }
-    
-    .lightbox-close {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-    
-    .lightbox-close:hover {
-        transform: scale(1.2);
-    }
-    
-    .portfolio-item {
-        transition: all 0.3s ease;
-        opacity: 0;
-    }
-    
-    .portfolio-item.show {
-        opacity: 1;
-    }
-    
-    body.loaded {
-        animation: fadeIn 0.5s ease;
-    }
-    
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-`;
-
-const styleSheet = document.createElement('style');
-styleSheet.textContent = lightboxStyles;
-document.head.appendChild(styleSheet);
