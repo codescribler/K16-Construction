@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Primary colors */
+  --color-primary: #2c5282;
+  --color-primary-dark: #1a365d;
+  --color-primary-light: #4a7cb8;
+
+  /* Secondary / CTA colors */
+  --color-secondary: #ed8936;
+  --color-secondary-dark: #dd6b20;
+
+  /* Semantic colors */
+  --color-success: #48bb78;
+  --color-danger: #e53e3e;
+  --color-warning: #ffc107;
+
+  /* Neutrals */
+  --color-dark: #1a202c;
+  --color-light: #f7fafc;
+  --color-gray: #718096;
+  --color-gray-light: #e2e8f0;
+
+  /* Fonts */
+  --font-primary: var(--font-poppins);
+  --font-secondary: var(--font-open-sans);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.05);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.06);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Focus-visible for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Form inputs */
+.form-input,
+.form-select,
+.form-textarea {
+  @apply w-full rounded-md border border-gray-light px-4 py-3 text-base transition-all duration-200;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  @apply border-primary ring-2 ring-primary/25 outline-none;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
