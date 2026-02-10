@@ -1,19 +1,14 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { pageview, trackEvent } from '@/lib/gtag';
 
 export function GoogleAnalyticsEvents() {
   const pathname = usePathname();
-  const isFirstLoad = useRef(true);
 
-  // Track page views on every route change (skip first load — handled by inline script)
+  // Track page views on every route change
   useEffect(() => {
-    if (isFirstLoad.current) {
-      isFirstLoad.current = false;
-      return;
-    }
     pageview(pathname);
   }, [pathname]);
 

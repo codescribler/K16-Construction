@@ -7,7 +7,6 @@ import { generateBusinessSchema } from '@/lib/schema';
 import { BASE_URL } from '@/data/site';
 import { Analytics } from '@vercel/analytics/next';
 import { GoogleAnalyticsEvents } from '@/components/analytics/GoogleAnalyticsEvents';
-import Script from 'next/script';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import './globals.css';
 
@@ -65,6 +64,22 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${poppins.variable} ${openSans.variable}`}>
+      <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `,
+          }}
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"
@@ -76,18 +91,6 @@ export default function RootLayout({
         <BackToTop />
         <Analytics />
         <GoogleAnalyticsEvents />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="beforeInteractive"
-        />
-        <Script id="google-analytics" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
       </body>
     </html>
   );
