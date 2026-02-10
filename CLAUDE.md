@@ -4,46 +4,47 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a K16 Construction company website project. Currently contains only image assets for construction/renovation showcases including:
-- Kitchen renovations
-- Bathroom installations  
-- Bedroom designs
-- Home extensions
-- British home styling
+K16 Construction company website — a Next.js 15 app with TypeScript, Tailwind CSS v4, and App Router. Deployed on Vercel.
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Icons**: lucide-react
+- **Utilities**: clsx, tailwind-merge
+- **Validation**: zod
+- **Email**: resend
+- **Analytics**: Vercel Analytics, Google Analytics
 
 ## Project Structure
 
 ```
 K16 Construction/
-├── images/           # Construction project showcase images
-└── CLAUDE.md        # This file
+├── src/
+│   ├── app/          # Next.js App Router pages and layouts
+│   ├── components/   # React components
+│   └── lib/          # Utility functions
+├── public/
+│   └── images/       # Optimized construction project images (.webp)
+├── next.config.ts
+├── tsconfig.json
+├── tailwind / postcss configs
+├── package.json
+└── CLAUDE.md
 ```
 
-## Development Setup
+## Development
 
-Since this is a new project without existing code:
+```bash
+npm install        # Install dependencies
+npm run dev        # Start dev server (http://localhost:3000)
+npm run build      # Production build
+npm run lint       # ESLint
+```
 
-1. **For static website development:**
-   - Create index.html as the main entry point
-   - Consider organizing styles in a css/ directory
-   - Place JavaScript files in a js/ directory if needed
+## Key Conventions
 
-2. **For modern web app development:**
-   - Initialize with appropriate framework (React, Vue, etc.)
-   - Set up build tooling as needed
-   - Configure deployment pipeline
-
-## Image Assets
-
-The images/ directory contains high-quality construction project photos that should be:
-- Optimized for web delivery (consider compression)
-- Used with appropriate alt text for accessibility
-- Potentially organized into subcategories as the project grows
-
-## Next Steps
-
-When developing this site, consider:
-- Creating a responsive design suitable for construction industry clients
-- Implementing a gallery or portfolio section to showcase the existing images
-- Adding contact forms for potential customers
-- Including service descriptions and company information
+- All pages are statically generated except API routes (`/api/contact`, `/api/consultation`)
+- Images are served from `public/images/` in WebP format
+- Components use Tailwind utility classes with `cn()` helper (clsx + tailwind-merge)
