@@ -64,7 +64,17 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${poppins.variable} ${openSans.variable}`}>
-      <head>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <BackToTop />
+        <Analytics />
+        <GoogleAnalyticsEvents />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-26HD5E4ZZ1"
           strategy="afterInteractive"
@@ -77,18 +87,6 @@ export default function RootLayout({
             gtag('config', 'G-26HD5E4ZZ1');
           `}
         </Script>
-      </head>
-      <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
-        />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <BackToTop />
-        <Analytics />
-        <GoogleAnalyticsEvents />
       </body>
     </html>
   );
