@@ -8,7 +8,6 @@ import { BASE_URL } from '@/data/site';
 import { Analytics } from '@vercel/analytics/next';
 import { GoogleAnalyticsEvents } from '@/components/analytics/GoogleAnalyticsEvents';
 import Script from 'next/script';
-import { Suspense } from 'react';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import './globals.css';
 
@@ -76,9 +75,7 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <Analytics />
-        <Suspense fallback={null}>
-          <GoogleAnalyticsEvents />
-        </Suspense>
+        <GoogleAnalyticsEvents />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="beforeInteractive"

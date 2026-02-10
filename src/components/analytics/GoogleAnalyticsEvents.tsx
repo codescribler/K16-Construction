@@ -1,18 +1,21 @@
 'use client';
 
-import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { pageview, trackEvent } from '@/lib/gtag';
 
 export function GoogleAnalyticsEvents() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const isFirstLoad = useRef(true);
 
-  // Track page views on every route change
+  // Track page views on every route change (skip first load — handled by inline script)
   useEffect(() => {
-    const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
-    pageview(url);
-  }, [pathname, searchParams]);
+    if (isFirstLoad.current) {
+      isFirstLoad.current = false;
+      return;
+    }
+    pageview(pathname);
+  }, [pathname]);
 
   // Track click events (calls, CTAs)
   useEffect(() => {
