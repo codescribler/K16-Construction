@@ -2,15 +2,10 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { pageview, trackEvent } from '@/lib/gtag';
+import { trackEvent } from '@/lib/gtag';
 
 export function GoogleAnalyticsEvents() {
   const pathname = usePathname();
-
-  // Track page views on every route change
-  useEffect(() => {
-    pageview(pathname);
-  }, [pathname]);
 
   // Track click events (calls, CTAs)
   useEffect(() => {
