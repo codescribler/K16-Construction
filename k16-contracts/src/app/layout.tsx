@@ -6,6 +6,7 @@ import { BackToTop } from '@/components/layout/BackToTop';
 import { generateBusinessSchema } from '@/lib/schema';
 import { BASE_URL } from '@/data/site';
 import { Analytics } from '@vercel/analytics/next';
+import Script from 'next/script';
 import './globals.css';
 
 const poppins = Poppins({
@@ -62,6 +63,20 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${poppins.variable} ${openSans.variable}`}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-26HD5E4ZZ1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-26HD5E4ZZ1');
+          `}
+        </Script>
+      </head>
       <body>
         <script
           type="application/ld+json"
