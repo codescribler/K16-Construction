@@ -8,6 +8,8 @@ import { BASE_URL } from '@/data/site';
 import { Analytics } from '@vercel/analytics/next';
 import { GoogleAnalyticsEvents } from '@/components/analytics/GoogleAnalyticsEvents';
 import Script from 'next/script';
+import { Suspense } from 'react';
+import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import './globals.css';
 
 const poppins = Poppins({
@@ -74,9 +76,11 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <Analytics />
-        <GoogleAnalyticsEvents />
+        <Suspense fallback={null}>
+          <GoogleAnalyticsEvents />
+        </Suspense>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-26HD5E4ZZ1"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="beforeInteractive"
         />
         <Script id="google-analytics" strategy="beforeInteractive">
@@ -84,7 +88,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-26HD5E4ZZ1');
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
       </body>

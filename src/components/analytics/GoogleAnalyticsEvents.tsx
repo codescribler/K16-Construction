@@ -1,9 +1,20 @@
 'use client';
 
 import { useEffect } from 'react';
-import { trackEvent } from '@/lib/gtag';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { pageview, trackEvent } from '@/lib/gtag';
 
 export function GoogleAnalyticsEvents() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  // Track page views on every route change
+  useEffect(() => {
+    const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
+    pageview(url);
+  }, [pathname, searchParams]);
+
+  // Track click events (calls, CTAs)
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       const target = e.target as HTMLElement;
