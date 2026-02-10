@@ -6,6 +6,7 @@ import { BackToTop } from '@/components/layout/BackToTop';
 import { generateBusinessSchema } from '@/lib/schema';
 import { BASE_URL } from '@/data/site';
 import { Analytics } from '@vercel/analytics/next';
+import { GoogleAnalyticsEvents } from '@/components/analytics/GoogleAnalyticsEvents';
 import Script from 'next/script';
 import './globals.css';
 
@@ -87,6 +88,7 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <Analytics />
+        <GoogleAnalyticsEvents />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Toast } from '@/components/ui/Toast';
 import { Button } from '@/components/ui/Button';
+import { trackEvent } from '@/lib/gtag';
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,6 +35,11 @@ export function ContactForm() {
       });
 
       if (res.ok) {
+        trackEvent('form_submission', {
+          event_category: 'engagement',
+          event_label: 'contact_form',
+          form_type: 'contact',
+        });
         setToast({ message: "Thank you for your message! We'll be in touch within 24 hours.", type: 'success' });
         form.reset();
       } else {

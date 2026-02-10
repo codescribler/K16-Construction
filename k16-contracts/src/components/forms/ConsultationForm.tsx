@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Toast } from '@/components/ui/Toast';
 import { Button } from '@/components/ui/Button';
+import { trackEvent } from '@/lib/gtag';
 
 export function ConsultationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,6 +42,11 @@ export function ConsultationForm() {
       });
 
       if (res.ok) {
+        trackEvent('form_submission', {
+          event_category: 'engagement',
+          event_label: 'consultation_form',
+          form_type: 'consultation',
+        });
         setToast({ message: "Consultation request received! We'll call you within 24 hours to schedule your free assessment.", type: 'success' });
         form.reset();
       } else {
