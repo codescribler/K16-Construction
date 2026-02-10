@@ -1,11 +1,9 @@
 'use client';
 
 import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
 import { trackEvent } from '@/lib/gtag';
 
 export function GoogleAnalyticsEvents() {
-  const pathname = usePathname();
 
   // Track click events (calls, CTAs)
   useEffect(() => {
