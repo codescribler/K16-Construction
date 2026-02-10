@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { BackToTop } from '@/components/layout/BackToTop';
 import { generateBusinessSchema } from '@/lib/schema';
 import { BASE_URL } from '@/data/site';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const poppins = Poppins({
@@ -70,6 +71,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   );
