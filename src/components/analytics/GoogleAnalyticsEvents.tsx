@@ -1,9 +1,18 @@
 'use client';
 
-import { useEffect } from 'react';
-import { trackEvent } from '@/lib/gtag';
+import { Suspense, useEffect } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { pageview, trackEvent } from '@/lib/gtag';
 
-export function GoogleAnalyticsEvents() {
+function AnalyticsTracking() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  // Track page views on route changes
+  useEffect(() => {
+    const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
+    pageview(url);
+  }, [pathname, searchParams]);
 
   // Track click events (calls, CTAs)
   useEffect(() => {
@@ -36,4 +45,12 @@ export function GoogleAnalyticsEvents() {
   }, []);
 
   return null;
+}
+
+export function GoogleAnalyticsEvents() {
+  return (
+    <Suspense fallback={null}>
+      <AnalyticsTracking />
+    </Suspense>
+  );
 }
