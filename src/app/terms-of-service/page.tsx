@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
     'K16 Contracts Ltd terms of service. Terms and conditions governing the use of our website and construction services.',
+  alternates: {
+    canonical: '/terms-of-service',
+  },
 };
 
 export default function TermsOfServicePage() {

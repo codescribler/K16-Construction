@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
     'K16 Contracts Ltd privacy policy. How we collect, use, and protect your personal data under UK GDPR.',
+  alternates: {
+    canonical: '/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyPage() {

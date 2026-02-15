@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     url: '/contact',
     images: [{ url: '/images/british-home.jpg', width: 1200, height: 630, alt: 'Contact K16 Contracts' }],
   },
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactPage() {

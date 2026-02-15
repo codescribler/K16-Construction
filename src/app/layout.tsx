@@ -54,6 +54,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
@@ -65,7 +68,6 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${poppins.variable} ${openSans.variable}`}>
-      <head />
       <body>
         <script
           type="application/ld+json"

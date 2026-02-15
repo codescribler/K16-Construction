@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     url: '/projects',
     images: [{ url: '/images/envisioning-modern-kitchen.jpg', width: 1200, height: 630, alt: 'K16 Contracts Project Portfolio' }],
   },
+  alternates: {
+    canonical: '/projects',
+  },
 };
 
 export default function ProjectsPage() {

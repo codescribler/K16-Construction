@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     url: '/about',
     images: [{ url: '/images/british-home.jpg', width: 1200, height: 630, alt: 'K16 Contracts - Family Builders Since 1998' }],
   },
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 const valueIconMap: Record<string, React.ReactNode> = {

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     url: '/process',
     images: [{ url: '/images/home-extension-work.jpg', width: 1200, height: 630, alt: 'K16 Contracts Building Process' }],
   },
+  alternates: {
+    canonical: '/process',
+  },
 };
 
 const sidebarIconMap: Record<string, React.ReactNode> = {

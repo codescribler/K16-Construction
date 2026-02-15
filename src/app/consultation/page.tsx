@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     url: '/consultation',
     images: [{ url: '/images/designing-a-bedroom.jpg', width: 1200, height: 630, alt: 'Book a Free Consultation with K16 Contracts' }],
   },
+  alternates: {
+    canonical: '/consultation',
+  },
 };
 
 const inclusions = [
