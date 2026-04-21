@@ -5,7 +5,7 @@ export const siteInfo: SiteInfo = {
   tagline: 'Quality Home Extensions & Renovations Since 1998',
   description:
     'Family-run builders delivering quality home extensions and renovations since 1998. Your home, our reputation.',
-  phone: '01727 872611',
+  phone: '01727 600516',
   email: 'kieran@k16contracts.co.uk',
   address: {
     line1: '8 Pilgrim Close, Park Street',

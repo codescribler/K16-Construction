@@ -12,7 +12,7 @@ import { generateFAQSchema } from '@/lib/schema';
 export const metadata: Metadata = {
   title: 'Contact Us - Get Your Free Quote',
   description:
-    'Contact K16 Contracts - Get in touch for quality home extensions and renovations. Free consultations available. Call 01727 872611.',
+    'Contact K16 Contracts - Get in touch for quality home extensions and renovations. Free consultations available. Call 01727 600516.',
   openGraph: {
     title: 'Contact Us | K16 Contracts',
     description: 'Get in touch for quality home extensions and renovations.',

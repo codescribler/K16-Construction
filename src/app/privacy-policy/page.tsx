@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
               <a href="mailto:kieran@k16contracts.co.uk" className="text-primary hover:underline">
                 kieran@k16contracts.co.uk
               </a>{' '}
-              or call us on 01727 872611.
+              or call us on 01727 600516.
             </p>
 
             <h2 className="mt-10 text-2xl font-bold">2. What Data We Collect</h2>
@@ -253,7 +253,7 @@ export default function PrivacyPolicyPage() {
                   kieran@k16contracts.co.uk
                 </a>
               </li>
-              <li><strong>Phone:</strong> 01727 872611</li>
+              <li><strong>Phone:</strong> 01727 600516</li>
               <li><strong>Post:</strong> K16 Contracts Ltd, 8 Pilgrim Close, Park Street, St. Albans, AL2 2JD</li>
             </ul>
           </div>

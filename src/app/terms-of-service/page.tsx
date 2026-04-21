@@ -204,7 +204,7 @@ export default function TermsOfServicePage() {
                   kieran@k16contracts.co.uk
                 </a>
               </li>
-              <li><strong>Phone:</strong> 01727 872611</li>
+              <li><strong>Phone:</strong> 01727 600516</li>
               <li>
                 <strong>Post:</strong> K16 Contracts Ltd, 8 Pilgrim Close, Park Street, St. Albans,
                 AL2 2JD
