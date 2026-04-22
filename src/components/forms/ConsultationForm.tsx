@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Toast } from '@/components/ui/Toast';
 import { Button } from '@/components/ui/Button';
+import { track } from '@vercel/analytics';
 import { trackEvent } from '@/lib/gtag';
 
 export function ConsultationForm() {
@@ -47,6 +48,7 @@ export function ConsultationForm() {
           event_label: 'consultation_form',
           form_type: 'consultation',
         });
+        track('consultation_form_submit');
         setToast({ message: "Consultation request received! We'll call you within 24 hours to schedule your free assessment.", type: 'success' });
         form.reset();
       } else {

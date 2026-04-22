@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Toast } from '@/components/ui/Toast';
 import { Button } from '@/components/ui/Button';
+import { track } from '@vercel/analytics';
 import { trackEvent } from '@/lib/gtag';
 
 export function ContactForm() {
@@ -40,6 +41,7 @@ export function ContactForm() {
           event_label: 'contact_form',
           form_type: 'contact',
         });
+        track('contact_form_submit');
         setToast({ message: "Thank you for your message! We'll be in touch within 24 hours.", type: 'success' });
         form.reset();
       } else {
